@@ -176,7 +176,7 @@ internal class TabSettings
             ("Logging", delegate
             {
                 ImGui.SetNextItemWidth(100f);
-                ImGui.DragInt("Amount of messages to load from history", ref C.HistoryAmount.ValidateRange(0, 5000), 1f, 0, 5000);
+                ImGui.DragInt("Amount of messages to load from history", ref C.HistoryAmount.ValidateRange(0, 9999999), 1f, 0, 9999999);
                 ImGuiEx.HelpMarker("This amount of last messages will be loaded into memory from chat log upon opening chat with a player. Once loaded, you can't load more previous messages than this. This setting does not affects performance.");
 
                 ImGui.SetNextItemWidth(100f);
